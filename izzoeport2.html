@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Image Buttons</title>
+    <style>
+        body {
+            background-image: url('background.png'); /* Replace with your image URL */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat:no-repeat; /* Prevents tiling */            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Floating effect for the clickable image */
+        .floating-img {
+            position: absolute;
+            top: -5%; /* Position the image near the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for perfect centering */
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Button image styling */
+        .image-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 200px;
+        }
+
+        .image-buttons a {
+            display: block;
+        }
+
+        .image-buttons img {
+            width: 200px; /* Adjust image size */
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .image-buttons img:hover {
+            transform: scale(1.1); /* Slight scale effect on hover */
+        }
+
+        /* Floating effect */
+        @keyframes float {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating clickable image -->
+    <a href="https://www.mychemicalromance.com/news" class="floating-img">
+        <img src="title.jpg.png" alt="Clickable Image">
+    </a>
+
+    <!-- Image buttons -->
+    <div class="image-buttons">
+        <a href="https://www.mychemicalromance.com/news" target="_blank">
+            <img src="content.png" alt="Button 1">
+        </a>
+        <a href="https://www.mychemicalromance.com/news" target="_blank">
+            <img src="browser outputs.png" alt="Button 2">
+        </a>
+        <a href="https://www.mychemicalromance.com/news" target="_blank">
+            <img src="reflection.png" alt="Button 3">
+        </a>
+    </div>
+
+</body>
+</html>
